@@ -1,26 +1,15 @@
 <template>
   <div>
-    <Hello />
-    <p>{{ sum }}</p>
-    <p>{{ greeting }}</p>
+    <h1>My Todo List</h1>
+    <TodoList />
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
-import { add, greet } from './utils.js'
-
-let sum = add(2, 3)
-let greeting = greet("Alice")
+import TodoList from './components/TodoList.vue'
 
 export default {
-  name: 'App',
-  components: { Hello },
-  data() {
-    return {
-      sum: add(2, 3),
-      greeting: greet("Alice")
-    }
-  }
+  name: "App",
+  components: { TodoList }
 }
 </script>
