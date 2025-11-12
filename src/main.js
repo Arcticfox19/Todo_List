@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
-import './style.css';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 
-createApp(App).mount('#app');
-
-const a = 1;
-console.log(a);
+const app = createApp(App);
+app.use(createPinia()); // 注册 Pinia
+app.config.globalProperties.$apiUrl = import.meta.env.VITE_API_URL;
+app.mount('#app');
