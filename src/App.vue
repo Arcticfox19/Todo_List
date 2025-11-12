@@ -12,4 +12,7 @@ export default {
   name: "App",
   components: { TodoList }
 }
+console.log("change in main")
+
+
 </script>
